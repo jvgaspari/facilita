@@ -109,7 +109,7 @@ export const ModalCreateCustomer: React.FC = () => {
         );
       }
 
-      queryClient.invalidateQueries(["customers"]);
+      await queryClient.invalidateQueries(["customers"]);
       reset();
       handleModalClose();
     } catch (error) {
